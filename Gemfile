@@ -8,9 +8,6 @@ gem "rails", "~> 7.1.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -26,8 +23,19 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Authentication gem
+#
+# TODO bu kısmı düzenle
+# gem 'devise', '~> 4.9', '>= 4.9.3'
+
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+
+# Bootstrap gem
+gem 'bootstrap', '~> 5.3', '>= 5.3.2'
+gem 'jquery-rails', '~> 4.4'
+
 # Use Redis adapter to run Action Cable in production
-# gem "redis", ">= 4.0.1"
+gem "redis", ">= 4.0.1"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -45,12 +53,24 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
 end
 
+group :production do
+  # Production postgresql gem
+  gem 'pg', '~> 1.5', '>= 1.5.4'
+end
+
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
+  # Hotreload gem
+  gem 'guard', '~> 2.18', '>= 2.18.1'
+  gem 'guard-zeus', '~> 2.0', '>= 2.0.1'
+  gem 'rack-livereload', '~> 0.5.1'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+
+  # Development sqlite3 gem
+  gem 'sqlite3', '~> 1.6', '>= 1.6.8'
+
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
