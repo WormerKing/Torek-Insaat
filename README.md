@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Torek-Insaat
+Torek İnşaat web sitesi
+=======
+>>>>>>> c8b2d02 (Proje oluşturuldu ve github'a yüklendi)
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +29,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< HEAD
+=======
+>>>>>>> f610f06 (Proje oluşturuldu ve github'a yüklendi)
+>>>>>>> c8b2d02 (Proje oluşturuldu ve github'a yüklendi)
