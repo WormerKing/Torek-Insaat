@@ -28,11 +28,13 @@ gem "jbuilder"
 # TODO bu kısmı düzenle
 # gem 'devise', '~> 4.9', '>= 4.9.3'
 
-gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+
 
 # Bootstrap gem
 gem 'bootstrap', '~> 5.3', '>= 5.3.2'
-gem 'jquery-rails', '~> 4.4'
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+
+#gem 'jquery-rails', '~> 4.4'
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"
