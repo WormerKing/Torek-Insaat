@@ -1,170 +1,195 @@
 <%= render "layouts/navbar" %>
-<!--div class="container-flouid">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <h3 class="text-light">Logo</h3>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Kurumsal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-light" href="#">Projeler</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">İnsan Kaynakları</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Haberler</a>
-          </li>
-          <li class="nav-item dropdown dropdown-with-hover">
-             <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             	Haberler
-              </a>
-              <div class="dropdown-menu dropdown-menu-with-hover" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-          </li>
-          <li class="nav-item dropdown dropdown-with-hover">
-             <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             	Haberler
-              </a>
-              <div class="dropdown-menu dropdown-menu-with-hover" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-          </li>
-
-
-        </ul>
-        <form class="">
-          <a class="btn btn-outline-primary mr-2 text-light" href="#">Login</a>
-          <a class="btn btn-outline-success text-light" href="#">Become member</a>
-        </form>
-
-      </div>
+<%= stylesheet_link_tag "index", media:"all", "data-turbo-track": "reload" %>
+<!--div class="container-fluid">
+    <h3 style="text-align:center;padding-bottom:10px">Projelerimiz</h3>
+    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-3 row-cols- row-cols-lg-12">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-2">
+            <div class="card" style="width: 18rem;">
+                <%# image_tag("slider-1.jpeg",class:"card-img-top",alt:"Card image")%>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card" style="width: 18rem;">
+                <%# image_tag("slider-2.jpeg",class:"card-img-top",alt:"Card image")%>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card" style="width: 18rem;">
+                <%# image_tag("slider-3.jpeg",class:"card-img-top",alt:"Card image")%>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-0">
+            <div class="card" style="width: 18rem;">
+                <%# image_tag("slider-1.jpeg",class:"card-img-top",alt:"Card image")%>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">Wormer</div>
     </div>
-  </nav>
-</div>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
 </div-->
-<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Provident deserunt magni nulla facilis omnis nemo ducimus reprehenderit numquam iste consequuntur aliquam, odit dolore soluta minus ullam optio aperiam exercitationem illum.
-Quo neque suscipit sint laudantium pariatur molestiae unde dolorum est sed cum, alias reiciendis dolor! Ea maiores quidem sequi velit expedita harum hic assumenda, veniam nulla quia saepe repellendus consequatur?
-Odio ipsa, esse, cumque incidunt ducimus neque voluptate dolore minus nemo, asperiores perferendis blanditiis, ullam in. Corporis modi debitis incidunt praesentium dolore, id molestiae similique, facilis facere quis, error quidem?
-Unde ut recusandae quas fugit earum dolorum ex doloremque iusto odio amet tempore quaerat ipsum vero quos deleniti sit laboriosam cum cupiditate, soluta provident voluptate repellendus non quia hic! Iste?
-Non saepe nesciunt dolore accusantium, natus esse deleniti mollitia eveniet provident reprehenderit quis minima. Voluptatem, error facere sed provident, ipsa velit mollitia voluptas illo unde veniam hic libero ea, doloremque?
-Sit consequuntur, consectetur omnis enim nam aut tenetur, molestiae rem voluptates nisi sint! Expedita voluptatem doloribus cum sunt sapiente blanditiis similique commodi cumque quisquam, a! Magni placeat eveniet, consequatur ex.
-Inventore, sunt tempora praesentium facere molestias totam, maxime dolores. Dolore illo molestiae et cum nihil culpa numquam sed alias animi odio, iure praesentium ut voluptatum id minus itaque iste perferendis.
-Nisi adipisci at maiores amet. Modi quam commodi quia atque, distinctio dignissimos ullam esse molestiae. Distinctio ducimus ex tempora quam at eaque, recusandae labore, consequuntur in quasi excepturi. Sint, sapiente.
-Velit facere harum, voluptatem ad maxime, saepe reiciendis eaque atque vel mollitia non, quos. Similique minima recusandae exercitationem molestias eos perspiciatis. A totam nam nihil consequatur qui cum provident doloribus.
-Accusamus pariatur dolorum expedita cumque, amet tempore fuga nostrum, non aliquam molestias suscipit. Maxime, quam, eveniet. Sunt, minima excepturi libero! Officia impedit odit at, doloremque magnam a dolor, nostrum temporibus.
-Saepe deleniti expedita placeat consectetur natus, aut minus quis dolorum voluptates tempora accusantium, laborum rem cum eveniet ipsam eos aspernatur nihil dignissimos voluptatum praesentium repellendus quos rerum! Eaque, ad, ullam.
-Qui magni corporis excepturi nisi ipsam vero veniam ipsa, facilis, est ex sint illo placeat id laudantium, nihil totam tenetur beatae veritatis! Sunt fuga eos veniam nisi consequuntur ex explicabo?
-Commodi maiores, minus. Officia optio commodi eum aut, voluptas, beatae sit fugit reiciendis ea! Non placeat tenetur aperiam, voluptatum unde magnam neque aspernatur corporis! Magni, tempore? Corrupti temporibus, totam harum.
-Sequi maxime ut ex voluptas eos iure labore libero quisquam, fugiat officiis, quis, itaque? Distinctio, quo voluptatem magnam totam repellat enim placeat ipsa veritatis? Voluptatem nobis eligendi, magni eos unde!
-Incidunt cupiditate, laboriosam doloribus expedita iusto dolore temporibus blanditiis qui deserunt esse illum modi voluptas a adipisci aliquid, perferendis. Magnam nesciunt laborum accusantium atque aspernatur illo pariatur eaque delectus totam.
-Nobis, possimus. Voluptatem, voluptas, beatae. Quibusdam voluptates consequuntur maiores delectus veniam similique ut, nemo assumenda architecto vero quaerat hic unde incidunt odit accusamus nisi laboriosam et. Nobis, deleniti autem qui!
-Voluptatibus corrupti hic, quis iure ratione doloribus repellat tempora alias. Quisquam illo reiciendis nostrum officia? Earum nulla quaerat a eum aspernatur odit ad dolore minima cupiditate in. Earum, maxime vero.
-Voluptatibus, fuga hic saepe quam quod commodi animi quos repudiandae suscipit autem distinctio, cumque, quia fugit amet a aut ipsum esse impedit beatae, eius sed. Sunt, modi? Nesciunt, optio, sequi?
-Nam quaerat placeat cumque officia dignissimos vero id deserunt ratione consequuntur nulla porro ut pariatur laudantium, quisquam assumenda vitae repudiandae dolorum laboriosam, quasi recusandae dolores numquam eos. Eveniet, molestias, libero.
-Natus odio esse deleniti asperiores, blanditiis voluptate quaerat. Accusantium veniam totam temporibus, culpa. Repudiandae deleniti, reprehenderit at suscipit provident error vel velit dignissimos nulla tenetur. Deserunt unde veniam nesciunt mollitia!
-Maxime corporis soluta id error vero quasi autem sunt quod tenetur dolore atque unde reiciendis voluptates assumenda mollitia eum repellat, fuga minus. Ut illum, voluptatum voluptatem distinctio sint sapiente quos?
-Distinctio praesentium quae, expedita doloremque commodi, quod, dolor quam necessitatibus accusantium ipsa vel dolorum ut vero amet eaque repudiandae rerum eligendi adipisci saepe dignissimos cumque. Eos, consequatur. Doloremque, alias itaque!
-Ullam odio sapiente, illo ducimus repellat illum repudiandae sit cupiditate saepe, quis delectus nam, non, qui voluptas! Debitis ut explicabo ratione odit, asperiores laboriosam saepe. Quidem magni hic, dignissimos cum?
-Facere magni velit commodi, eos eaque omnis reprehenderit, vero neque ea excepturi nemo voluptatibus nobis culpa impedit modi magnam officiis hic, ad ullam quasi. Fugiat ducimus veniam pariatur modi, quidem?
-Dolorum magni odio voluptate, atque. Natus ad earum quis animi, laborum id minima, deleniti, dolor accusantium eius quasi pariatur eum molestias reiciendis doloremque tempore quisquam! Labore dicta sit impedit, molestiae!
-Facere iure quasi nam debitis, ducimus maiores distinctio fugit beatae sunt quia. Facilis tenetur id autem quae suscipit, quibusdam perspiciatis magni eligendi laudantium facere reiciendis sequi, quam ipsa libero ipsam!
-Repudiandae fugit autem beatae voluptatibus harum aut quia laboriosam, iusto voluptate molestias magni? Quia aliquid voluptatem quam, aperiam aut obcaecati officiis perspiciatis laudantium, eos, quibusdam, numquam ab vero laborum hic!
-Voluptatem obcaecati perferendis modi asperiores, soluta dignissimos animi libero sint rem. Fugiat nobis, nam, nesciunt quibusdam, quod voluptates deserunt blanditiis alias pariatur tenetur modi! Placeat id blanditiis explicabo est debitis.
-Rem asperiores voluptatum tempora! Totam neque amet asperiores eveniet quasi, accusantium maxime culpa nobis ea enim sed optio excepturi et labore voluptatibus animi impedit dicta, omnis sit quae voluptatem expedita.
-Tempore magnam quibusdam doloremque enim, velit corrupti rerum ipsam, odit, placeat officiis accusantium quisquam minima. Enim dicta ex maxime consectetur. Mollitia libero doloribus fugiat numquam magnam odio delectus ad accusamus!
-In quae accusantium pariatur dicta aspernatur quisquam illo consectetur nihil quos. Reiciendis doloribus qui, totam sed repellendus temporibus est? Laboriosam sit ducimus labore hic aliquam asperiores nesciunt iusto facere necessitatibus!
-Veritatis amet nobis error repellat ullam sint odit consequatur porro, dolor. Amet tempore doloribus at rem ipsum sapiente. Quibusdam delectus quidem quisquam eligendi tenetur fuga sit fugit obcaecati mollitia explicabo.
-Quas possimus, ipsa. Magni illo porro atque, dolorum quos! Consequatur, debitis quas maiores voluptas magni velit impedit quae corporis esse delectus totam adipisci odit fuga inventore iste, nisi enim aut.
-Reiciendis deserunt nostrum ea aliquam laudantium velit expedita, quaerat repellendus molestiae necessitatibus dolorum dignissimos accusamus sapiente veritatis? Quam, minus. Eum ipsum quaerat delectus veniam harum ad maiores fuga optio architecto.
-Repudiandae fugiat non minus est quidem enim veniam culpa, sequi fuga sunt quia, tenetur. Tenetur ducimus, dignissimos magnam, dolorem nesciunt omnis! Quaerat error facilis voluptate non, inventore provident pariatur distinctio.
-Saepe nostrum vel similique excepturi facilis nemo debitis, dolor mollitia facere sed culpa optio cupiditate, praesentium, iusto quo molestiae impedit? Optio, cumque, corporis totam expedita consequatur blanditiis quam distinctio nostrum.
-Facilis repellat dicta quam placeat maxime praesentium perspiciatis, aliquid commodi unde, voluptatum consequatur optio? Itaque amet perferendis, nam mollitia eum beatae distinctio fugit at nesciunt non sapiente sint nisi, pariatur.
-Amet, vel quas ipsum nesciunt expedita, quia molestias porro neque, architecto iusto quisquam soluta ex accusamus rerum sint quasi enim mollitia, dolorem facere quae. Odit ipsa hic corrupti placeat vel.
-Vero quae id dolorem similique, nesciunt, cupiditate consectetur quisquam nulla, assumenda cum ea dolor beatae ducimus. Esse ea corporis doloremque ullam tempore. Commodi, eaque unde odit voluptas quam facilis provident!
-Consectetur iste odit, quaerat labore consequuntur reiciendis. Beatae velit architecto tenetur itaque, molestias nihil quos doloremque eos et perferendis ipsam iusto culpa distinctio tempora. Iure modi ipsam deleniti atque sit.
-Autem quia dignissimos nulla perspiciatis doloremque, alias suscipit non eos dolores vitae itaque, hic molestias odit, nesciunt sapiente, deserunt cupiditate? Id quos, voluptates commodi quasi cumque, totam facere unde iure.
-Atque harum voluptates consequuntur natus quis fugit aliquam eos accusantium officia mollitia porro, a at vitae repellendus impedit magni consequatur nulla optio est maiores soluta odio tenetur unde! Vitae, saepe?
-Ad, libero officiis eaque aliquid vitae dignissimos! Quia asperiores tempore, consequatur, recusandae amet, blanditiis nisi nihil inventore debitis cum fugit, doloribus temporibus ut laborum exercitationem rem dolores. Amet expedita, asperiores.
-Est error perspiciatis blanditiis porro, molestias, necessitatibus culpa quidem nam nesciunt ex exercitationem, corrupti omnis tenetur illo minus iusto sed aliquid voluptatem, nostrum esse. Quo quisquam impedit nemo exercitationem porro.
-Omnis fuga tenetur dolores enim explicabo temporibus consequuntur quidem hic voluptatem repudiandae dolore sint sunt voluptate nobis ullam delectus et similique a velit, molestias quaerat molestiae nihil voluptates laboriosam. Optio.
-Impedit voluptatum, odit expedita adipisci enim voluptas dolore quam velit nisi similique asperiores nostrum blanditiis sit non. Rem, facilis dolorem, non eaque cupiditate, fuga nisi ipsum minima dolores excepturi quis.
-Earum aperiam modi, ipsa! Molestiae necessitatibus officia aliquam reiciendis iste voluptatum est omnis inventore provident earum cumque consectetur maxime voluptates quae accusantium velit veritatis voluptatibus quidem placeat, ex? Numquam, rem.
-Obcaecati voluptatibus inventore officia unde impedit at incidunt tempora repudiandae modi, sunt voluptates esse corporis cupiditate voluptatem eaque deserunt id et iusto eos dolorum ab nemo. Commodi natus, molestias alias.
-Natus, itaque, a laudantium blanditiis quos nemo quod placeat qui autem alias repudiandae asperiores aperiam repellendus unde enim ut, non debitis facere? Harum possimus totam modi libero quam consequuntur quia.
-Esse, tempore. Earum reprehenderit quam est iure sit soluta dolor necessitatibus deleniti ipsum eum doloribus voluptatem unde nostrum suscipit ipsa amet a, nam omnis. Recusandae ex mollitia adipisci provident sunt?
-Eveniet reprehenderit velit, voluptatibus esse odio libero recusandae magnam, earum officiis molestias atque quis rem, odit animi quas laboriosam vero, voluptates cum nihil. Quis, officia id pariatur ex voluptate recusandae.
-Debitis id harum nobis minus itaque quisquam nesciunt animi ipsam, dolores. Culpa ducimus unde blanditiis numquam nihil porro quam, necessitatibus labore, nobis explicabo autem error doloremque praesentium recusandae cum veritatis.
-Doloribus rem fuga cumque debitis harum enim adipisci, repudiandae fugiat cum repellat molestiae illo? Quasi modi commodi nostrum, sapiente perferendis voluptatibus vel expedita, consequatur itaque tenetur quam beatae labore quo.
-Alias vitae pariatur odio, laborum! Ea fugiat molestias quisquam id, animi obcaecati corrupti sunt, dicta ipsa consequuntur laboriosam odit, exercitationem maiores, consequatur asperiores ducimus accusantium soluta quasi architecto numquam reprehenderit.
-Sit quasi et deserunt, voluptatum aspernatur, modi possimus inventore corporis reiciendis corrupti nemo ad assumenda laboriosam, quod iste? Explicabo libero esse delectus consectetur. Vel placeat, unde doloribus exercitationem nulla, distinctio.
-Delectus aperiam quod fugit corrupti assumenda ut placeat id adipisci, dignissimos atque dolor amet nisi laboriosam debitis libero tempore saepe repudiandae aliquid quibusdam. Consequuntur maxime magni tenetur consequatur minima suscipit?
-Modi inventore ipsa accusamus ab error suscipit repellendus tempora sunt, obcaecati corporis ut dolore facilis vero commodi magni fuga impedit deleniti ex perspiciatis libero, voluptatibus nihil! Debitis architecto quia ullam.
-Fuga sunt, ipsa recusandae explicabo quia eligendi sit ab ipsam enim, saepe exercitationem quod sint corrupti impedit obcaecati veritatis id expedita porro numquam! Voluptatem illum, iste quae ab. Autem, cum.
-Odio numquam, quam debitis voluptatibus consequatur recusandae praesentium culpa molestiae sequi sit, eveniet voluptates! Doloremque architecto incidunt debitis recusandae accusantium? Distinctio et, libero? A voluptatum atque quas iste ratione odit.
-Blanditiis quo, fugit. Dolor id numquam nobis dolorum, vitae quos suscipit enim in rerum voluptatum illo unde expedita architecto ut quas libero omnis sequi recusandae nesciunt sunt. Autem, dolore, facere.
-Magni, laboriosam voluptatum iste sit, aspernatur quasi exercitationem, odit corporis voluptas officiis veritatis? Voluptatem excepturi officiis corrupti, error asperiores minus cupiditate, sed, quo at placeat voluptatum nihil molestias libero laboriosam.
-Dolore, architecto cum mollitia nesciunt exercitationem quisquam illum aperiam, accusantium sint quasi, quos. Nisi doloremque fuga error, recusandae distinctio porro ratione, impedit veritatis maxime quia maiores, facere adipisci corrupti ipsa.
-Quam tempore accusamus praesentium beatae! Ratione, quibusdam! Laboriosam, velit quis distinctio veritatis totam quo illum, error perferendis ipsam, id cupiditate officia corrupti alias, magnam temporibus nobis obcaecati rerum. Iste, vero.
-Veniam ipsa facilis facere ex impedit ab culpa totam dolor quas ipsum excepturi quia molestias dignissimos placeat earum illo obcaecati harum nesciunt aspernatur voluptas, necessitatibus doloribus inventore. Reprehenderit, distinctio, nihil!
-Corrupti quod natus maiores quam autem eum, cum nemo est non! Nemo ipsum perspiciatis amet voluptates ipsam quo quos facere, asperiores dolor architecto eveniet beatae ad voluptatibus sed, voluptatum possimus.
-Enim esse mollitia provident in perferendis fuga est nesciunt, unde quaerat inventore repudiandae facilis at. Hic aliquam adipisci tenetur placeat repellat perferendis, sequi illum eveniet, enim, atque veritatis non asperiores?
-Ab quis quo ullam fugiat, voluptas, error! Doloribus similique non minus corrupti tempora praesentium dolorem aliquid, corporis, at voluptatibus consequatur itaque aperiam ratione, in saepe, veniam fugiat placeat porro eius.
-Iure quasi, numquam distinctio harum illum perferendis, deleniti, excepturi porro magnam amet modi dicta necessitatibus voluptate commodi facere, ducimus ipsum quas? Beatae excepturi quasi, exercitationem id voluptatum. Ea, ratione? Ea?
-Eligendi debitis, ut, vero voluptatum voluptatem qui ex quis illum quam inventore vitae nostrum aliquam magnam sunt atque earum. Excepturi veritatis repellendus, animi quis a voluptatem maxime quod rerum consequuntur.
-Voluptate animi commodi aut eligendi iure nemo beatae sequi saepe corrupti, nihil dolor quod quas, quidem nisi perferendis sunt, assumenda veritatis? Iure quas porro consectetur. Maxime minus, saepe cupiditate id?
-Earum consectetur et neque inventore pariatur. Cumque officia iure saepe, dolorem ipsum quas laudantium, accusamus deserunt labore dignissimos voluptatem ipsam culpa, sequi et ducimus. Soluta quae, harum voluptates numquam iusto!
-Ipsum, provident magni, repudiandae quaerat vitae similique architecto veritatis aspernatur asperiores officia perspiciatis consectetur reiciendis facilis modi, quasi delectus sapiente ex. Nemo est repellendus vero praesentium aliquam rem veritatis sed.
-Ipsum fugiat, ratione explicabo perspiciatis aliquid totam, veniam assumenda quos doloremque quibusdam minima esse atque porro suscipit tenetur delectus ex ullam sint mollitia natus numquam, eveniet? Quisquam minus blanditiis explicabo?
-Deleniti, corrupti, dignissimos? At labore minus maiores fuga. Minima repellat nobis sunt ducimus autem rem accusamus nostrum eius eos voluptatem quis voluptas facere, fugiat deserunt nisi aliquam quae cupiditate fugit!
-Nam et excepturi maxime aut pariatur veniam dolore dignissimos laudantium. Autem maxime hic quae odio? Possimus est eveniet animi sit aut aliquam ea recusandae, dolor blanditiis. Dolorem, at fugit. Commodi.
-Ratione dignissimos ab architecto cum tempore pariatur recusandae, temporibus delectus ipsa aliquam perspiciatis labore repudiandae porro mollitia nam quo magnam obcaecati. Voluptate eligendi aspernatur molestias voluptates ratione debitis, libero nobis.
-Officiis beatae saepe itaque omnis, ea quas voluptatum error cumque voluptate aperiam ratione nihil alias recusandae fugit dolor vero, sit! Rerum vel ducimus sapiente voluptas ea cum fugit sit voluptatem!
-Possimus minus enim nostrum, debitis culpa ipsa sequi earum nobis optio repellendus autem fugiat expedita veniam et laudantium iusto fugit similique magni nam totam! Soluta exercitationem quam quas vero earum!
-Dolorum quod, at quas itaque reprehenderit quasi mollitia rem, quaerat impedit ab. Pariatur dignissimos dolor quo odio sapiente ratione harum exercitationem iusto dicta recusandae minima officiis, odit, eaque cupiditate sequi.
-Ipsa, obcaecati? Maiores repellendus neque, debitis illo nesciunt ipsa fugiat. Recusandae, perspiciatis officiis? Repellendus, reprehenderit commodi tempora. Quia eligendi nobis accusantium cum maxime nemo nisi optio molestiae earum, iure quidem.
-Aliquid eum quod cum harum? Vitae quo optio repellendus non molestiae quos minima numquam dolores odit necessitatibus illo provident eum est, fuga, ducimus cumque sapiente quae quas, pariatur amet natus.
-Dolore minima reprehenderit dignissimos commodi exercitationem eum dolorum soluta vero voluptates debitis, nisi. Molestias magnam odio repellat obcaecati delectus ullam nemo sequi, qui tempora, cum, fugit vel culpa dolore, officia.
-Amet voluptas, excepturi, voluptates sit tempora dolorum! Iste numquam aliquid impedit ea, eveniet commodi ipsum ad quos laborum eligendi minima rem eaque labore, aspernatur laboriosam cupiditate adipisci quia. Nemo, voluptatum.
-Aspernatur deleniti assumenda cupiditate ut. Dicta vero, nemo quam, ipsa magni possimus, aliquid laudantium deserunt assumenda distinctio officiis nam ducimus, suscipit commodi nostrum animi inventore odit neque adipisci quo voluptas.
-Reiciendis inventore ex laudantium quo maxime voluptate quam nisi quibusdam optio architecto? Est tempore doloribus fuga enim officiis odit placeat repellendus dolore consequuntur! Debitis doloremque non rerum odio optio enim.
-Fuga dolores veritatis vitae unde ipsam tenetur? Dolorum ea, numquam nesciunt eaque rem harum repellat eum sed, non incidunt odit asperiores fugiat quaerat distinctio perspiciatis similique, in impedit necessitatibus pariatur?
-Autem vero distinctio ullam, molestias rerum soluta, facere non officia, maxime ex veritatis veniam, iusto earum tenetur commodi ratione. Facilis a illo ullam nostrum minus deserunt quia doloribus quos dolores.
-Rerum nemo ipsum enim esse, labore quasi ut delectus quos, perspiciatis veritatis beatae totam illum ullam mollitia veniam? Exercitationem perspiciatis, sunt repellat eum voluptatem vel commodi officia modi. Aut, ullam.
-Quaerat corporis similique recusandae numquam facilis. Placeat distinctio eligendi doloremque optio fugit tempora cum hic, labore aspernatur minus harum necessitatibus architecto corporis! Dolores officia impedit nulla corrupti voluptates? Delectus, rem?
-Inventore quis laudantium ut sequi ratione totam commodi quod est esse ad corrupti doloremque obcaecati nisi excepturi, aliquam sed ex, quibusdam dolorum fugiat perferendis ullam architecto dicta deleniti. Impedit, quasi.
-Quidem molestiae, praesentium aliquid exercitationem non, nobis, reiciendis doloribus voluptatem officiis facere iure! Minus reiciendis vero voluptates cupiditate rerum mollitia eligendi sunt corporis animi. Sunt quidem quam, cum aperiam amet.
-Molestias distinctio eveniet iste perspiciatis corporis aliquam laudantium et accusantium sit debitis rem error quae consequuntur perferendis, dicta inventore, sequi provident tempore, quia itaque voluptatem nostrum. Facilis, iure quia adipisci?
-Neque dolore maiores nobis ad dicta. Fugiat soluta officiis praesentium autem quasi officia adipisci necessitatibus molestiae, dolores esse ipsum eveniet vitae doloremque, animi. Pariatur optio quam, iusto maxime reprehenderit dolorem.
-Deserunt explicabo, impedit quas laudantium, officiis eos dicta culpa aspernatur esse inventore ut? Minima non rerum, est deserunt aliquid neque natus. Quis ipsam saepe ab quidem autem qui, eaque molestias.
-Vel impedit error esse corporis optio adipisci earum nihil debitis ab. Exercitationem ratione debitis aut sequi dolorum quas veritatis ex velit saepe expedita necessitatibus, laboriosam aliquam tenetur, natus distinctio, enim!
-Eum, temporibus? Nemo voluptatibus nesciunt repellat, ab, repellendus amet quas, aliquam dicta suscipit sed vitae tempore cupiditate hic earum ea dolor reiciendis deleniti. Animi sit exercitationem similique. Necessitatibus, voluptatum, deleniti?
-Eaque iste, quisquam, aliquid perspiciatis sed eum consequuntur unde illum ratione placeat dolorem quod, minus perferendis, veniam quae corporis error? Id quis accusamus aliquid veniam minus quibusdam pariatur saepe ullam.
-Dolor, ipsam quasi rerum molestias labore voluptas laborum atque temporibus culpa explicabo blanditiis voluptatum error assumenda provident obcaecati, eius. Earum excepturi qui ipsa autem, aspernatur deserunt nobis nulla rem minima.
-Nesciunt amet perspiciatis laudantium quisquam tempore architecto nihil, veritatis possimus aliquid sunt quia maxime saepe, suscipit, porro! Cupiditate rerum iure incidunt deleniti doloribus inventore quos accusamus! Voluptatem cupiditate ut, in!
-Illo totam, qui fuga velit voluptas nisi, facere quidem accusantium asperiores, iste sequi delectus, labore! Officia ad earum atque in dolores ipsa dignissimos hic, placeat provident eaque. Assumenda, omnis illum.</p>
+<div class="container-fluid" style="background:#ffe7b3;width:100%;height:100px;">
+</div>
+
+<section class="wrapper pt-5">
+    <div class="container-fostrap">
+        <div>
+            <img src="https://www.yenigun.com.tr/wp-content/uploads/2018/11/yenigun-logo.png" class="fostrap-logo"/>
+            <h1 class="heading">
+                Projelerimiz 
+            </h1>
+        </div>
+        <br><br>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            <%= image_tag("slider-1.jpeg",class:"card-img-top",alt:"Card image")%>
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Bootstrap 3 Carousel FadeIn Out Effect
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                             <%= image_tag("slider-2.jpeg",class:"card-img-top",alt:"Card image")%>
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> Material Design Responsive Menu
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Material Design is a visual programming language made by Google. Language programming...
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="https://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                             <%= image_tag("slider-3.jpeg",class:"card-img-top",alt:"Card image")%>
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">5  Button Hover Animation Effects
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    tutorials button hover animation, although very much a hover button is very beauti...
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            <%= image_tag("slider-4.jpeg",class:"card-img-top",alt:"Card image")%>
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Bootstrap 3 Carousel FadeIn Out Effect
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            <%= image_tag("slider-5.jpeg",class:"card-img-top",alt:"Card image")%>
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Bootstrap 3 Carousel FadeIn Out Effect
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            <%= image_tag("slider-6.jpeg",class:"card-img-top",alt:"Card image")%>
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Bootstrap 3 Carousel FadeIn Out Effect
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

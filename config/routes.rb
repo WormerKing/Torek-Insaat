@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get "up" => "rails/#show", as: :rails_health_check
+    devise_for :admin
+    devise_scope :admin do
+        get "login",to: "devise/sessions#new"
+    end
 
-  root "main#index"
+    get "up" => "rails/#show", as: :rails_health_check
+
+    root "main#index"
 end
