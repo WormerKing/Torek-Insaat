@@ -7,4 +7,7 @@ class MainController < ApplicationController
 	    	type: "application/pdf"
 	  	)
 	end
+	def bizden_haberler
+		@bizden_haberler = BizdenHaberler.all
+	end
 end

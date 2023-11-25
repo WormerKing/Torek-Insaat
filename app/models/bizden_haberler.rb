@@ -1,0 +1,2 @@
+class BizdenHaberler < ApplicationRecord
+end

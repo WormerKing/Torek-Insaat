@@ -1,0 +1,27 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2 col-md-1"></div>
+		<div class="col-lg-8 col-md-10">
+			<h3>Bizden Haberler</h3>
+
+			<hr>
+		</div>
+		<div class="col-lg-2 col-md-1"></div>
+	</div>
+	<% @bizden_haberler.each do |haber|%>
+		<div class="row text-center pb-5">
+			<div class="col-lg-2 col-md-1"></div>
+			<div class="col-lg-8 col-md-10">
+				<div class="card" style="width: 50%">
+		  			<%= image_tag(haber.image,class:"card-img-top")%>
+		  			<div class="card-body">
+		    			<h5 class="card-title"><%= haber.header%></h5>
+		    			<p class="card-text"><%= haber.body%></p>
+		    			<%= link_to("Daha fazla",haber.source,class:"btn btn-primary")%>
+		  			</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-1"></div>
+		</div>
+	<% end %>
+</div>
