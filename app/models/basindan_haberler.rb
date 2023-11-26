@@ -1,0 +1,2 @@
+class BasindanHaberler < ApplicationRecord
+end

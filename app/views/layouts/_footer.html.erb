@@ -1,0 +1,73 @@
+<%= stylesheet_link_tag "_footer", media:"all", "data-turbo-track": "reload" %>
+<div class="container-fluid mt-auto">
+    <footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+        <div class="container p-4 pb-0">
+            <section class="">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Torek Anonim Şirketi
+                        </h6>
+                    </div>
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Sektörler</h6>
+                        <p>
+                            <%= link_to("İnşaat",insaat_sektoru_path,class:"social")%>
+                        </p>
+                        <p>
+                            <%= link_to("Enerji",enerji_sektoru_path,class:"social")%>
+                        </p>
+                        <p>
+                            <%= link_to("Turizm",turizm_sektoru_path,class:"social")%>
+                        </p>
+                        <p>
+                            <%= link_to("Danışmanlık",danismanlik_sektoru_path,class:"social")%>
+                        </p>
+                    </div>
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">İletişim</h6>
+                        <p><i class="fas fa-home mr-3"></i> Ankara/Keçiören, Türkiye</p>
+                        <p><i class="fas fa-envelope mr-3"></i> example@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> +90 555 555 55 55</p>
+                        <p><i class="fas fa-print mr-3"></i> +90 533 533 53 53</p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 mb-4">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Bizi Sosyal Medyadan Takip Edin</h6>
+
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #fc6887" href="#!" role="button">
+                            <%= image_tag("icons/instagram.svg",class:"bi bi-instagram")%>
+                        </a>
+
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button">
+                            <%= image_tag("icons/twitter.svg",class:"bi bi-twitter")%>
+                        </a>
+
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button">
+                            <%= image_tag("icons/facebook.svg",class:"bi bi-facebook")%>
+                        </a>
+
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="https://www.linkedin.com/in/tuncay-dinler-a314b9260/" role="button">
+                            <%= image_tag("icons/linkedin.svg",class:"bi bi-linkedin")%>
+                        </a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #737373" href="https://github.com/WormerKing" role="button">
+                            <%= image_tag("icons/github.svg",class:"bi bi-github")%>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:
+            <a class="text-white" href="/">Torek İnşaat</a>
+        </div>
+    </footer>
+</div>

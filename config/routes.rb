@@ -16,12 +16,10 @@ Rails.application.routes.draw do
     get "/yonetim-kurulu" => "main#yonetim_kurulu",as: :yonetim_kurulu
     get "/organizasyon" => "main#organizasyon",as: :organizasyon
     get "/sosyal-sorumluluk" => "main#sosyal_sorumluluk",as: :sosyal_sorumluluk
-    get "/gizlilik-sozlesmesi" => "main#gizlilik_sozlesmesi",as: :gizlilik_sozlesmesi
 
     # Projeler
     get "/devam-eden-projeler" => "main#devam_eden_projeler",as: :devam_eden_projeler
     get "/tamamlanan-projeler" => "main#tamamlanan_projeler",as: :tamamlanan_projeler
-    get "/gayrimenkul-projeleri" => "main#gayrimenkul_projeleri",as: :gayrimenkul_projeleri
 
     # Sektörler
     get "/insaat-sektoru" => "main#insaat_sektoru",as: :insaat_sektoru
@@ -39,4 +37,7 @@ Rails.application.routes.draw do
 
     # Faaliyet raporu pdf
     get "/faaliyet-raporu-pdf/:year" => "main#faaliyet_raporu_pdf",as: :faaliyet_raporu_pdf
+
+    # Çalışan Adayı Aydınlatma Formu pdf
+    get "/calisan-adayi-aydinlatma-metni-pdf" => "main#calisan_adayi_aydinlatma_metni_pdf",as: :calisan_adayi_aydinlatma_metni_pdf
 end

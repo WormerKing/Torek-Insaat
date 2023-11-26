@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag "basindan_haberler", media:"all", "data-turbo-track": "reload" %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2 col-md-1"></div>
+		<div class="col-lg-8 col-md-10">
+			<h3>Basından Haberler</h3>
+
+			<hr>
+		</div>
+		<div class="col-lg-2 col-md-1"></div>
+	</div>
+	<% @basindan_haberler.each do |haber|%>
+		<div class="row text-center pb-5">
+			<div class="col-lg-2 col-md-1"></div>
+			<div class="col-lg-8 col-md-10">
+				<div class="card mx-auto card-background" style="width: 50%">
+		  			<div class="card-body">
+		    			<h5 class="card-title pb-3"><%= haber.header%></h5>
+		    			<p class="card-text pb-2"><%= haber.body%></p>
+		    			<%= link_to("Daha fazla",haber.source,class:"btn btn-primary")%>
+		  			</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-1"></div>
+		</div>
+	<% end %>
+</div>
