@@ -9,7 +9,7 @@ services:
         depends_on:
             - db
         ports:
-            - "3000:3000/tcp"
+            - "80:3000/tcp"
         environment:
             - DATABASE_HOST=172.40.5.0
         #networks:

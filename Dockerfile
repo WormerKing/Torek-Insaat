@@ -9,3 +9,5 @@ COPY . /app
 COPY Gemfile* ./app
 
 RUN bundle install && bundle update
+
+RUN bin/rails db:create && bin/rails db:migrate && bin/rails db:seed

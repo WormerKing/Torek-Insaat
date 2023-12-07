@@ -2,10 +2,7 @@
 
 echo "Derleme işlemi başladı"
 
-yarn install --ignore-engines 
-
-bin/rails db:migrate RAILS_ENV=development 
-bin/rails webpacker:compile 
+# bin/rails db:migrate RAILS_ENV=development 
 
 cp /etc/hosts /etc/hosts.new && \
 sed -i 's/::1\tlocalhost ip6-localhost ip6-loopback/::1 ip6-localhost ip6-loopback/' /etc/hosts.new && \
