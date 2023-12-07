@@ -1,6 +1,6 @@
 FROM ruby:3.2.0
 
-RUN apt update -y && apt upgrade -y && apt install -y nodejs postgresql-client build-essential npm && npm install --global yarn
+RUN apt update -y && apt upgrade -y && apt install -y nodejs postgresql-client build-essential npm
 
 WORKDIR /app
 
