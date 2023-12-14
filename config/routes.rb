@@ -1,15 +1,41 @@
 Rails.application.routes.draw do
     root "main#index"
+    
 
-    devise_for :admins
-    devise_for :users
+    devise_for :admins, :controllers => {
+        :registrations => "admins/registrations",
+        :sessions => "admins/sessions"
+    }, path: 'admin', path_names: {
+        sign_in: 'login',
+        sign_out: 'logout', 
+        password: 'secret', 
+        confirmation: 'verification', 
+        unlock: 'unblock', 
+        registration: 'register', 
+        sign_up: 'cmon_let_me_in'
+    },:skip => %i[ passwords confirmations sessions ]
+
+    devise_scope :admin do
+        get "/login",to: "admins/sessions#new", as: :login_new
+        post "/login.admin",to: "admins/sessions#create", as: :login_create
+        delete "/logout",to: "admins/sessions#destroy", as: :logout
+    end
+
+    authenticated :admins do
+        # get "/bizden-haberler/ekle" => "bizden_haberler#ekle",controller: :bizden_haberler    
+    end
+    get "/bizden-haberler/ekle" => "bizden_haberler#ekle",controller: :bizden_haberler 
+    post "/bizden-haberler/ekle" => "bizden_haberler#ekle_post",controller: :bizden_haberler,as: :bizden_haberler_ekle_post
+
+    # devise_for :users, :skip => [ :passwords, :registrations, :confirmations]
+
     get "up" => "rails/#show", as: :rails_health_check
 
     # Navbar'da bulunan linklerin rotalanması
 
 
     # Kurumsal
-    get "/login" => "main#index",as: :login
+    # get "/login" => "main#index",as: :login
     get "/hakkimizda" => "main#hakkimizda",as: :hakkimizda
     get "/faaliyet-raporu" => "main#faaliyet_raporu",as: :faaliyet_raporu
     get "/tarihce" => "main#tarihce",as: :tarihce

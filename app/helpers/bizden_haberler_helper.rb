@@ -1,0 +1,2 @@
+module BizdenHaberlerHelper
+end

@@ -1,0 +1,6 @@
+<%= form_for @haber,url: bizden_haberler_ekle_post_path(@haber) do |f|%>
+	<%= f.text_field :header%>
+	<%= f.text_field :body%>
+	<%= f.text_field :source%>
+	<%= f.submit "Onayla"%>
+<%end%>
