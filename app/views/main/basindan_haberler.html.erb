@@ -4,7 +4,9 @@
 		<div class="col-lg-2 col-md-1"></div>
 		<div class="col-lg-8 col-md-10">
 			<h3>Basından Haberler</h3>
-
+			<% if admin_signed_in?%>
+				<%= link_to "Ekle","/"%>
+			<% end %>
 			<hr>
 		</div>
 		<div class="col-lg-2 col-md-1"></div>

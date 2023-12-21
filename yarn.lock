@@ -2,3 +2,7 @@
 # yarn lockfile v1
 
 
+"@fnando/password_strength@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.npmjs.org/@fnando/password_strength/-/password_strength-1.1.4.tgz"
+  integrity sha512-Ul71Y7IzXMlJcnKytpEuYKGT0xHCUN7zozJu7r+L5kyHuIA+dmb1CVR0gaTNcYAQYLAByRt1RpLwzHOdUo6w4g==

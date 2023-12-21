@@ -27,6 +27,10 @@ gem "jbuilder"
 #
 # TODO bu kısmı düzenle
 gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'devise_zxcvbn', '~> 6.0'
+
+# password validation
+gem 'strong_password', '~> 0.0.10'
 
 # Bootstrap gem
 gem 'bootstrap', '~> 5.3', '>= 5.3.2'

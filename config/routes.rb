@@ -1,29 +1,38 @@
-Rails.application.routes.draw do
-    root "main#index"
-    
+Rails.application.routes.draw do  
+    unauthenticated do
+        root :to => 'main#index',as: :unauthenticated_root
+    end
+
+    authenticated do
+        root :to => 'admins/panels#panel',as: :authenticated_root
+        get "/panel" => "admins/panels#panel",:as => :admin_panel
+        get "/admin/all" => "admins/panels#all_admins",:as => :all_admins
+        
+        # delete "/admin/delete/:name" => "admins/registrations#wormer",:as => :admin
+    end
 
     devise_for :admins, :controllers => {
         :registrations => "admins/registrations",
         :sessions => "admins/sessions"
     }, path: 'admin', path_names: {
+        edit: 'düzenle',
         sign_in: 'login',
         sign_out: 'logout', 
         password: 'secret', 
         confirmation: 'verification', 
         unlock: 'unblock', 
-        registration: 'register', 
-        sign_up: 'cmon_let_me_in'
+        registration: 'kayıt', 
+        sign_up: 'ekle'
     },:skip => %i[ passwords confirmations sessions ]
 
     devise_scope :admin do
         get "/login",to: "admins/sessions#new", as: :login_new
         post "/login.admin",to: "admins/sessions#create", as: :login_create
         delete "/logout",to: "admins/sessions#destroy", as: :logout
+        delete "/admin/delete/:username" => "admins/registrations#destroy",:as => :admin
+        # get "/admin/all" => "admins/panels#all_admins",:as => :all_admins
     end
 
-    authenticated :admins do
-        # get "/bizden-haberler/ekle" => "bizden_haberler#ekle",controller: :bizden_haberler    
-    end
     get "/bizden-haberler/ekle" => "bizden_haberler#ekle",controller: :bizden_haberler 
     post "/bizden-haberler/ekle" => "bizden_haberler#ekle_post",controller: :bizden_haberler,as: :bizden_haberler_ekle_post
 

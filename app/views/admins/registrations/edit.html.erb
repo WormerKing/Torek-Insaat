@@ -1,43 +1,98 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "admins/shared/error_messages", resource: resource %>
+<!--%# form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%# render "admins/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%# f.label :email %><br />
+    <%# f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+  <%# if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%# resource.unconfirmed_email %></div>
+  <%# end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%# f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%# f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><%# @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%# f.label :password_confirmation %><br />
+    <%# f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%# f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%# f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%# f.submit "Update" %>
   </div>
-<% end %>
+<%# end %>
 
-<h3>Cancel my account</h3>
+<h3>Cancel my account</h3-->
 
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+<%# render "admins/shared/error_messages" %>
 
-<%= link_to "Back", :back %>
+<%= stylesheet_link_tag "admin_login", media:"all", "data-turbo-track": "reload" %>
+<section class="vh-100 gradient-custom ">
+    <div class="container py-1 h-75">
+        <% if flash[:error]%>
+            <div class="alert alert-danger text-center" role="alert">
+                <h1><%= flash[:error]%></h1>
+            </div>
+        <%end%>
+        <div class="row justify-content-center align-items-center h-75">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration form-up" style="border-radius: 15px;">
+                    <div class="card-body p-1 ms-md-5 me-md-5">
+                        <h3 class="mb-5 pb-1 pb-md-0 mb-md-5 pt-5 text-center">Yönetici Düzenle</h3>
+                        <%= form_for(@admin, url: admin_registration_path(@admin.username)) do |f| %>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-outline">
+                                        <%= f.text_field :username, autofocus: true,id: "username",class:"form-control form-control-lg",autocomplete: "username",placeholder:"Kullanıcı adı"%>
+                                    </div>
+                                </div>
+                                <!--div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <%# f.email_field :email, id: "email",class:"form-control form-control-lg",autocomplete: "email",placeholder:"Email",required:""%>
+                                    </div>
+                                </div-->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mb-4 d-flex align-items-center">
+
+                                    <div class="form-outline datepicker w-100">
+                                        <%= f.password_field :password, autocomplete: "current-password",id: "password",placeholder:"Yeni Şifre",class:"form-control form-control-lg"%>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-outline datepicker w-100">
+                                        <%= f.password_field :password_confirmation, autocomplete: "current-password",id: "password",placeholder:"Yeni Şifre tekrarı",class:"form-control form-control-lg",autocomplate:"new-password"%>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-2 pb-3 text-center">
+                                <%= f.submit "Kaydet",class:"btn btn-primary btn-lg",id:"submitButton"%>
+                            </div>
+                            <hr>
+                            <div class="mt-1 pt-1 pb-3 text-center">
+                                <%= link_to("Geri dön",admin_panel_path,class:"btn btn-danger")%>
+                            </div>
+                        <%end%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

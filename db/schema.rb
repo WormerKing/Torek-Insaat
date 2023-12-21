@@ -15,6 +15,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_13_172821) do
     t.string "username", limit: 50, null: false
     t.string "email", limit: 50, null: false
     t.string "encrypted_password", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"

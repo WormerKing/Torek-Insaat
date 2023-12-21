@@ -9,8 +9,8 @@ class DeviseCreateAdmins < ActiveRecord::Migration[7.1]
       t.string :encrypted_password, null: false 
 
       ## Recoverable
-      # t.string   :reset_password_token
-      # t.datetime :reset_password_sent_at
+      t.string   :reset_password_token
+      t.datetime :reset_password_sent_at
 
       ## Rememberable
       t.datetime :remember_created_at

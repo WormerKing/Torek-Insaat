@@ -1,33 +1,116 @@
 # frozen_string_literal: true
-
 class Admins::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+    # before_action :authenticate_admin!, :only => [:new]
+    before_action :kontrol
+    before_action :find_admin,only: %i[ destroy ]
+    skip_before_action :require_no_authentication, :only => [:new,:create,:edit,:update]
+    # before_action :configure_sign_up_params, only: [:create]
+    # before_action :configure_account_update_params, only: [:update]
 
-  # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+    def new
+        @new_admin = Admin.new
+    end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
+    def create
+        @new_admin = Admin.new
 
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
+        puts "#"*10000
+        puts params.require(:admin)
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+        if (params[:admin][:password] == params[:admin][:password_confirmation])
+            @new_admin = Admin.new(params.require(:admin).permit(:username,:email,:password))
 
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
+            if (@new_admin.save)
+                flash[:notice] = "Yönetici başarıyla eklendi"
+                redirect_to "/"
+            else
+                flash[:error] = "hata meydana geldi"
+                render :new
+            end
+        else
+            flash[:error] = "Şifreler uyuşmuyor"
+            render :new
+        end
+
+    end
+
+    def edit
+        puts "*"*1000
+        puts params
+
+        @admin = Admin.find_by_username(params[:format])
+        redirect_to(all_admins_path) unless @admin
+    end
+
+    def update
+        # FIXME güncelleme kısmı düzgün çalışmıyor
+        @admin = Admin.find_by_username(params[:format])
+
+        parametreler = params.require(:admin).permit(:username,:password,:password_confirmation)
+        puts parametreler
+
+        username = parametreler[:username]
+        password = parametreler[:password]
+        password_confirmation = parametreler[:password_confirmation]
+        puts "&"*100
+
+
+        if (username.empty?)
+            if (password.empty?)
+                redirect_to(all_admins_path)
+            else
+                if Admin.valid_password?(password) && password == password_confirmation
+                    @admin.reset_password(password,password_confirmation)
+                else
+                    flash[:error] = "Parolalar uyuşmuyor"
+                    render :edit
+                    return
+                end
+            end
+        else
+            if Admin.valid_username?(username) && @admin.update(:username => username)
+                flash[:notice] = "Kullanıcı adı başarıyla değiştirldi"
+                puts "73 satır"
+            else
+                puts @admin.errors.full_messages
+                flash[:error] = "Bu kullanıcı adını kullanamazsınız"
+                render :edit
+                return
+            end
+
+            unless password.empty?
+                if Admin.valid_password?(password) && password == password_confirmation
+                    @admin.reset_password(password,password_confirmation) if Admin.valid_password?(password)
+                    puts "86 satır"
+                    if @admin.username == current_admin.username
+                        sign_out current_admin
+                    end
+                    redirect_to("/")
+                    return      
+                    
+                else
+                    flash[:error] = "wormer"
+                    render :edit
+                end
+            end
+        end
+
+        # @admin.reset_password(parametreler.permit(:password),parametreler.permit(:password_confirmation))
+
+        # @admin.valid_password?(parametreler.permit(:password)) && @admin.valid_password?(parametreler.permit(:password_confirmation)) 
+
+        
+
+    end
+
+    def destroy
+        puts "#"*1000
+        puts "Silinecek kaydın kullanıcı adı : #{@admin.username}"
+        puts params
+        @admin.destroy
+
+        redirect_to("/")
+    end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
@@ -59,4 +142,13 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+    protected
+
+    def kontrol
+        redirect_to "/" unless admin_signed_in?
+    end
+
+    def find_admin
+        @admin = Admin.find_by_username(params[:username])
+    end
 end
