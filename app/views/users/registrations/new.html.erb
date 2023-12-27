@@ -1,0 +1,75 @@
+<%= render "users/shared/error_messages" %>
+
+<%= stylesheet_link_tag "admin_login", media:"all", "data-turbo-track": "reload" %>
+<section class="vh-100 gradient-custom ">
+    <div class="container py-1 h-75">
+        <% if flash[:error]%>
+            <div class="alert alert-danger text-center" role="alert">
+                <% flash[:error].each do |error|%>
+                    <strong><%= error%></strong><br>
+                <% end %>
+            </div>
+        <%end%>
+        <div class="row justify-content-center align-items-center h-75">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration form-up" style="border-radius: 15px;">
+                    <div class="card-body p-1 ms-md-5 me-md-5">
+                        <h3 class="mb-5 pb-1 pb-md-0 mb-md-5 pt-5 text-center">Kullanıcı kaydı</h3>
+                        <%= form_for(@user, url: user_registration_path(@user)) do |f| %>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <%= f.text_field :firstname, autofocus: true,id: "first_name",class:"form-control form-control-lg",autocomplete: "first_name",placeholder:"Adınız",required:""%>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <%= f.text_field :lastname,id: "last_name",class:"form-control form-control-lg",autocomplete: "lastname",placeholder:"Soyadınız",required:""%>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <%= f.telephone_field :telephone_number,:value => @user.telephone_number,id: "telephone_number",class:"form-control form-control-lg",autocomplete: "telephone_number",placeholder:"Telefon Numaranız",required:"",maxlength:"10",minlength:"10",pattern:"([0-9]{10})"%>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <%= f.text_field :username,id: "username",class:"form-control form-control-lg",autocomplete: "username",placeholder:"Kullanıcı adı",required:""%>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <%= f.email_field :email, id: "email",class:"form-control form-control-lg",autocomplete: "email",placeholder:"Email",required:""%>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mb-4 d-flex align-items-center">
+
+                                    <div class="form-outline datepicker w-100">
+                                        <%= f.password_field :password, autocomplete: "current-password",id: "password",placeholder:"Şifre",required:"",class:"form-control form-control-lg"%>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-outline datepicker w-100">
+                                        <%= f.password_field :password_confirmation, autocomplete: "current-password",id: "password_confirmation",placeholder:"Şifre tekrarı",required:"",class:"form-control form-control-lg",autocomplate:"new-password"%>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-2 pb-3 text-center">
+                                <%= f.submit "Kaydol",class:"btn btn-primary btn-lg",id:"submitButton"%>
+                            </div>
+                            <hr>
+                            <div class="mt-1 pt-1 pb-3 text-center">
+                                <%= link_to("Geri dön","/",class:"btn btn-danger")%>
+                            </div>
+                        <%end%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

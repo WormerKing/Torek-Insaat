@@ -1,15 +1,33 @@
 Rails.application.routes.draw do  
-    unauthenticated do
+    unauthenticated :admin do
         root :to => 'main#index',as: :unauthenticated_root
     end
 
-    authenticated do
+    unauthenticated :user do 
+        root :to => 'main#index',as: :user_root
+    end
+
+    authenticated :admin do
         root :to => 'admins/panels#panel',as: :authenticated_root
         get "/panel" => "admins/panels#panel",:as => :admin_panel
         get "/admin/all" => "admins/panels#all_admins",:as => :all_admins
         
         # delete "/admin/delete/:name" => "admins/registrations#wormer",:as => :admin
     end
+
+    devise_for :users, :controllers => {
+        :registrations => "users/registrations",
+        :sessions => "users/sessions"
+    }, :path => '',:path_names => {
+        edit: 'düzenle',
+        sign_in: 'giris',
+        sign_out: 'cikis', 
+        password: 'secret', 
+        confirmation: 'verification', 
+        unlock: 'unblock', 
+        registration: 'kayit', 
+        sign_up: 'kayit_ol'
+    }, :skip => %i[ passwords sessions confirmations ]
 
     devise_for :admins, :controllers => {
         :registrations => "admins/registrations",
@@ -31,6 +49,12 @@ Rails.application.routes.draw do
         delete "/logout",to: "admins/sessions#destroy", as: :logout
         delete "/admin/delete/:username" => "admins/registrations#destroy",:as => :admin
         # get "/admin/all" => "admins/panels#all_admins",:as => :all_admins
+    end
+
+    devise_scope :user do
+        get "/giris_yap",to: "users/sessions#new",as: :user_login
+        post "/giris_yap.user",to: "users/sessions#create", as: :user_login_post
+        delete "/logout_user",to: "users/sessions#destroy", as: :logout_user
     end
 
     get "/bizden-haberler/ekle" => "bizden_haberler#ekle",controller: :bizden_haberler 

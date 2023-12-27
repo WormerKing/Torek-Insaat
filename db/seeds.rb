@@ -89,3 +89,5 @@ basindan_haberler.each do |haber|
 	wormer.save
 	wormer = nil
 end
+
+Admin.create!(username:"Wormer",password:"WormerWormer09@",email:"example@gmail.com")

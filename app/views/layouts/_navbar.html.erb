@@ -71,14 +71,28 @@
                         </a>
 
                     </li>
-
                 </ul>
-                <% unless admin_signed_in? %>
-                    <%= link_to("Giriş yap",login_new_path,class:"btn btn-warning text-dark my-2 my-sm-0",type:"button")%>
+                <%# unless admin_signed_in? %>
+                    <%# link_to("Giriş yap",login_new_path,class:"btn btn-warning text-dark my-2 my-sm-0",type:"button")%>
+                <%# else %>
+                    <%# link_to("Oturumu kapat",logout_path,:method => :delete,class:"btn btn-danger text-dark my-2 my-sm-0",type:"button",data: { turbo_method: :delete })%>
+                <%# end %>
+                <% if admin_signed_in? || user_signed_in?%>
+                    <% if admin_signed_in? %>
+                        <%= link_to("Oturumu kapat",logout_path,:method => :delete,class:"btn btn-danger text-dark my-2 my-sm-0",type:"button",data: { turbo_method: :delete })%>
+                    <% else %>
+                        <%# bu kısım eklenecek%>
+                        <%= link_to("Oturumu kapat",logout_path,:method => :delete,class:"btn btn-danger text-dark my-2 my-sm-0",type:"button",data: { turbo_method: :delete })%>
+                    <% end %>
                 <% else %>
-                    <%= link_to("Oturumu kapat",logout_path,:method => :delete,class:"btn btn-danger text-dark my-2 my-sm-0",type:"button",data: { turbo_method: :delete })%>
-                <%end%>
-                
+                    <div class="ml-3">
+                        <%= link_to("Admin girişi",login_new_path,class:"btn btn-warning text-dark  my-sm-0",type:"button")%>
+                    </div>
+                    <span class="text-dark">as</span>
+                    <div class="ml-0">
+                        <%= link_to("Kullanıcı girişi",user_login_path,class:"btn btn-secondary text-warning ml-5 my-sm-0",type:"button")%>
+                    </div>
+                <% end %>
             </div>
         </div>
     </nav>
