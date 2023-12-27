@@ -75,4 +75,7 @@ Rails.application.routes.draw do
 
     # Çalışan Adayı Aydınlatma Formu pdf
     get "/calisan-adayi-aydinlatma-metni-pdf" => "main#calisan_adayi_aydinlatma_metni_pdf",as: :calisan_adayi_aydinlatma_metni_pdf
+
+    get "/tahmini-maliyet-hesaplama" => "main#tahmini_maliyet_hesaplama",:as => :tahmini_maliyet_hesaplama
+    post "/tahmini-maliyet-hesaplama" => "main#tahmini_maliyet_hesaplama_post",:as => :tahmini_maliyet_hesaplama_post
 end

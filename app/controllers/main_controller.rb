@@ -22,4 +22,15 @@ class MainController < ApplicationController
 	def basindan_haberler
 		@basindan_haberler = BasindanHaberler.all
 	end
+	def tahmini_maliyet_hesaplama
+		flash[:isim] = "aquame"
+	end
+	def tahmini_maliyet_hesaplama_post
+		puts "#"*1000
+		puts "Wormer"
+		flash[:isim] = "Wormer"
+		render(template:"main/tahmini_maliyet_hesaplama_post")
+	end
+
+	# FIXME navbar kısmı mobilde düzgün çalışmıyor
 end

@@ -1,0 +1,77 @@
+<%= stylesheet_link_tag "admin_login", media:"all", "data-turbo-track": "reload" %>
+<section class="vh-100 gradient-custom ">
+    <div class="container py-1 h-75">
+        <div class="row justify-content-center align-items-center h-75">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration form-outline-up" style="border-radius: 15px;">
+                    <div class="card-body p-1 ms-md-5 me-md-5">
+                        <h3 class="mb-5 pb-1 pb-md-0 mb-md-5 pt-5 text-center">Tahmini maliyet hesaplama</h3>
+                        <%= form_tag("/tahmini-maliyet-hesaplama",method: "post") do %>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <%= number_field_tag("metrekare", nil, autofocus: true,id: "metrekare",class:"form-control form-control-lg",autocomplete: "metrekare",placeholder:"Ev metrekaresi",max:"1000",min:"0",required:"")%>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <%= number_field_tag("kat_sayisi", nil, id: "kat_sayisi",class:"form-control form-control-lg",autocomplete: "metrekare",placeholder:"Kat sayısı",max:"10",min:"0",required:"")%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-outline text-center">
+                                        <%= button_tag "Hesapla",class:"btn btn-primary btn-lg text-center",id:"calculateButton",onclick:"hesapla();"%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center" id="hidden_div" hidden="">
+                                <p>Brüt maliyet : <strong id="harici_child"></strong></p>
+                                <p>Mütahhid ve arsa kârı dahil : <strong id="dahili_child"></strong></p>
+                                <hr>
+                                <p>Hemen bir hesap oluşturup <a href="/kayit_ol">kaydolun</a></p>
+                                <strong class="pb-3 pt-1">Ya da</strong>
+                                <p><a href="/giris">Giriş</a> yaparak devam edin</p>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var hesapla = () => {
+        var metrekare = document.getElementById("metrekare");
+        var kat_sayisi = document.getElementById("kat_sayisi");
+        var harici_child = document.getElementById("harici_child");
+        var dahili_child = document.getElementById("dahili_child");
+        var hidden_div = document.getElementById("hidden_div");
+
+
+        hidden_div.hidden = true;
+
+
+        let TurkishLira = new Intl.NumberFormat('tr-TR', {
+            style: 'currency',
+            currency: 'TRY',
+        });
+
+        if (metrekare.value == '' && kat_sayisi.value == '') { alert("Kat sayısı ve metrekare bilgisi boş olamaz!");}
+        else if (metrekare.value == '') {alert("Metrekare bilgisi boş olamaz!");}
+        else if (kat_sayisi.value == '') {alert("Kat sayısı boş olamaz!");}
+        else {
+            if ((kat_sayisi.value >= 0 && metrekare.value >= 0) && (kat_sayisi.value <= 10 && metrekare.value <= 1000)) {
+                var tahmini_fiyat = metrekare.value * kat_sayisi.value;
+                harici_child.innerHTML = TurkishLira.format(tahmini_fiyat * 10000);
+                dahili_child.innerHTML = TurkishLira.format(tahmini_fiyat * 20000);
+
+                hidden_div.hidden = false;
+            }
+            else if ((kat_sayisi.value > 10 && metrekare.value > 1000) || (kat_sayisi.value < 0 && metrekare.value < 0)) {alert("Geçersiz kat sayısı ve metrekare girildi!");}
+            else if ((kat_sayisi.value > 10) || (kat_sayisi.value < 0)) {alert("Geçersiz kat sayısı girildi!");}
+            else if ((metrekare.value > 1000) || (metrekare.value < 0)) {alert("Geçersiz metrekare girildi!");}
+        }
+    }
+</script>
