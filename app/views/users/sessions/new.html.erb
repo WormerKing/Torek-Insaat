@@ -10,7 +10,7 @@
                 <div class="card shadow-2-strong card-registration form-up" style="border-radius: 15px;">
                     <div class="card-body p-1 ms-md-5 me-md-5">
                         <h3 class="mb-5 pb-1 pb-md-0 mb-md-5 pt-5 text-center">Kullanıcı girişi</h3>
-                        <%= form_for(resource, url: user_login_post_path(resource)) do |f| %>
+                        <%= form_for(@user, url: user_login_post_path(@user)) do |f| %>
                             <div class="row">
                                 <div class="col-md-12 mb-4">
                                     <div class="form-outline">

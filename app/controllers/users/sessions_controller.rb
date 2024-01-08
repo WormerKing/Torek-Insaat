@@ -4,12 +4,17 @@ class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
     def new
-       super
+        @user = User.new
     end
 
     def create
-        # FIXME kullanıcı giriş yapamıyor
-        super
+        # @user = User.find_by(username:params.require(:user).permit(:username))
+
+        # if (@user.valid_password?(params.require(:user).permit(:password)))
+        #     redirect_to("/")
+        # else
+        #     render :new
+        # end
     end
 
   # DELETE /resource/sign_out
