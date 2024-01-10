@@ -2,10 +2,10 @@
 <section class="vh-100 gradient-custom ">
     <div class="container py-1 h-75">
         <div class="row justify-content-center align-items-center h-75">
-            <div class="col-12 col-lg-9 col-xl-7">
+            <div class="col-7 col-lg-7 col-xl-7">
                 <div class="card shadow-2-strong card-registration form-outline-up" style="border-radius: 15px;">
                     <div class="card-body p-1 ms-md-5 me-md-5">
-                        <h3 class="mb-5 pb-1 pb-md-0 mb-md-5 pt-5 text-center">Tahmini maliyet hesaplama</h3>
+                        <h3 class="mb-5 pb-1 pb-md-0 mb-md-5 pt-5 text-center">Müstakil ev maliyet hesaplama</h3>
                         <%= form_tag("/tahmini-maliyet-hesaplama",method: "post") do %>
                             <div class="row">
                                 <div class="col-md-6 mb-4">
@@ -22,7 +22,7 @@
                             <div class="row">
                                 <div class="col-md-12 mb-4">
                                     <div class="form-outline text-center">
-                                        <%= button_tag "Hesapla",class:"btn btn-primary btn-lg text-center",id:"calculateButton",onclick:"hesapla();"%>
+                                        <%= button_tag "Hesapla",class:"btn btn-primary btn-lg text-center",id:"calculateButton",onclick:"müstakil_hesapla();"%>
                                     </div>
                                 </div>
                             </div>
@@ -35,6 +35,102 @@
                                 <p><a href="/giris_yap">Giriş</a> yaparak devam edin</p>
                             </div>
                         <% end %>
+
+                        <!-- #>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$<# -->
+
+                        <hr style="background:blue;height:4px">
+                        <h4 class="text-center pb-4 pt-4">Apartman dairesi tahmini maliyet hesaplama</h4>
+                        <form action="/tahmini-maliyet-hesaplama" method="post">
+                            <%= form_tag("/tahmini-maliyet-hesaplama",method: "post") do %>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <%= number_field_tag("arsa_metrekare", nil, autofocus: true,id: "arsa_metrekare",class:"form-control form-control-lg",autocomplete: "arsa_metrekare",placeholder:"Apartman metrekaresi",max:"1000",min:"0",required:"")%>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <%= number_field_tag("arsa_kat_sayisi", nil, id: "arsa_kat_sayisi",class:"form-control form-control-lg",autocomplete: "arsa_kat_sayisi",placeholder:"Kat sayısı",max:"10",min:"0",required:"")%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <%= number_field_tag("daire_sayisi", nil, autofocus: true,id: "daire_sayisi",class:"form-control form-control-lg",autocomplete: "daire_sayisi",placeholder:"Kat başında daire sayısı",max:"1000",min:"0",required:"")%>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <%= number_field_tag("daire_metrekare", nil, autofocus: true,id: "daire_metrekare",class:"form-control form-control-lg",autocomplete: "daire_metrekare",placeholder:"Daire metrekaresi",max:"1000",min:"0",required:"")%>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-outline text-center">
+                                        <%= button_tag "Hesapla",class:"btn btn-primary btn-lg text-center",id:"calculateButton",onclick:"daire_hesapla();"%>
+                                    </div>
+                                </div>
+                                <div class="row text-center" id="daire_hidden_div" hidden="">
+                                    <p>Toplam daire sayısı : <strong id="toplam_daire_sayisi"></strong></p>
+                                    <p>Daire birim fiyatı : <strong id="daire_birim_fiyat"></strong></p>
+                                </div>
+                            </div>
+                        <% end %>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 col-lg-1 col-xl-1"></div>
+            <div class="col-4 col-lg-4 col-xl-4">
+                <div class="card shadow-2-strong card-registration form-outline-up" style="border-radius: 15px;">
+                    <div class="card-body p-1 ms-md-5 me-md-5">
+                        <h3 class="mb-5 pb-1 pb-md-0 mb-md-5 pt-5 text-center">İnşaat tipine göre maliyet hesaplama</h3>
+
+                        <hr style="background: blue;height:5px">
+
+                        <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+                        <%= form_tag("/tahmini-maliyet-hesaplama",method: "post") do %>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-outline">
+                                        <p class="text-center">Lütfen inşaat tipini seçiniz</p>
+                                        <select id="gelismis_hesaplama_select" class="form-select" aria-label="Default select example">
+                                            <option value="1A">1A</option>
+                                            <option value="1B">1B</option>
+                                            <option value="2A">2A</option>
+                                            <option value="2B">2B</option>
+                                            <option value="2C">2C</option>
+                                            <option value="3A">3A</option>
+                                            <option value="3B">3B</option>
+                                            <option value="4A">4A</option>
+                                            <option value="4B">4B</option>
+                                            <option value="4C">4C</option>
+                                            <option value="5A">5A</option>
+                                            <option value="5B">5B</option>
+                                            <option value="5C">5C</option>
+                                            <option value="5D">5D</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-outline">
+                                        <%= number_field_tag("gelismis_metrekare", nil, id: "gelismis_metrekare",class:"form-control form-control-lg",autocomplete: "metrekare",value:"1",placeholder:"Metrekare",required:"")%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-outline text-center">
+                                        <%= button_tag "Hesapla",class:"btn btn-primary btn-lg text-center",id:"calculateButton",onclick:"gelismis_hesapla();"%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center" id="gelismis_hidden_div" hidden="">
+                                <p>Maaliyet : <span id="gelismis_span"></span></p>
+                                <p>Daha fazla inşaat sınıfları ile ilgili bilgi için <a href="https://www.resmigazete.gov.tr/eskiler/2023/08/20230812-5.htm">buraya</a> bakabilirsiniz.</p>
+                            </div>
+                        <% end %>
                     </div>
                 </div>
             </div>
@@ -42,7 +138,7 @@
     </div>
 </section>
 <script>
-    var hesapla = () => {
+    var müstakil_hesapla = () => {
         var metrekare = document.getElementById("metrekare");
         var kat_sayisi = document.getElementById("kat_sayisi");
         var harici_child = document.getElementById("harici_child");
@@ -74,4 +170,93 @@
             else if ((metrekare.value > 1000) || (metrekare.value < 0)) {alert("Geçersiz metrekare girildi!");}
         }
     }
+
+    /* ########################################################################### */
+
+    var daire_hesapla = () => {
+        var arsa_metrekare = document.getElementById("arsa_metrekare");
+        var kat_sayisi = document.getElementById("arsa_kat_sayisi");
+        var daire_sayisi = document.getElementById("daire_sayisi");
+        var daire_metrekare = document.getElementById("daire_metrekare");
+
+        var daire_hidden_div = document.getElementById("daire_hidden_div");
+        var toplam_daire_sayisi = document.getElementById("toplam_daire_sayisi");
+        var daire_birim_fiyat = document.getElementById("daire_birim_fiyat");
+        var hata_mesajı = "";
+        var tahmini_daire_maliyeti = 1;
+
+        daire_hidden_div.hidden = true;
+
+
+        let TurkishLira = new Intl.NumberFormat('tr-TR', {
+            style: 'currency',
+            currency: 'TRY',
+        });
+
+        arsa_metrekare.value == "" ? hata_mesajı += "Arsa metrekaresi boş olamaz\n" : ""
+        kat_sayisi.value == "" ? hata_mesajı += "Kat sayısı boş olamaz\n" : ""
+        daire_sayisi.value == "" ? hata_mesajı += "Daire sayısı boş olamaz\n" : ""
+        daire_metrekare.value == "" ? hata_mesajı += "Daire metrekaresi boş olamaz\n" : ""
+        if (arsa_metrekare.value < ((daire_sayisi.value * daire_metrekare.value)+1)) {
+            hata_mesajı += "Apartman metrekaresi daire ölcülerini karşılamıyor\n";
+        }
+
+
+        if (hata_mesajı != "") {alert(hata_mesajı);}
+        else {
+            tahmini_daire_maliyeti = (arsa_metrekare.value * (kat_sayisi > 3 ? 9000 : 7500)) / ((daire_sayisi.value+1));
+
+            daire_hidden_div.hidden = false;
+
+
+            toplam_daire_sayisi.innerHTML = kat_sayisi.value * daire_sayisi.value;
+            daire_birim_fiyat.innerHTML = TurkishLira.format(tahmini_daire_maliyeti);
+
+
+        }
+    }
+
+    var gelismis_hesapla = () => {
+        var type = document.getElementById("gelismis_hesaplama_select");
+        var metrekare = document.getElementById("gelismis_metrekare");
+        var gelismis_span = document.getElementById("gelismis_span");
+        var gelismis_hidden = document.getElementById("gelismis_hidden_div");
+        var fiyat = 0;
+
+        let TurkishLira = new Intl.NumberFormat('tr-TR', {
+            style: 'currency',
+            currency: 'TRY',
+        });
+
+        gelismis_hidden.hidden = true;
+
+        var fiyatlar = {
+            "1A" : 1050.00,
+            "1B" : 1550.00,
+            "2A" : 2600.00,
+            "2B" : 3800.00,
+            "2C" : 5350.00,
+            "3A" : 7500.00,
+            "3B" : 9000.00,
+            "4A" : 10200.00,
+            "4B" : 12050.00,
+            "4C" : 12450.00,
+            "5A" : 13800.00,
+            "5B" : 16250.00,
+            "5C" : 18100.00,
+            "5D" : 21400.00
+        };
+
+        fiyat = fiyatlar[type.value] * (metrekare.value == "" ? 1 : metrekare.value);
+        gelismis_span.innerHTML = TurkishLira.format(fiyat);
+        gelismis_hidden.hidden = false;
+    }
+        
 </script>
+<!--
+Arsa alanı m2
+bina kat sayısı
+her kattaki daire sayısı
+daire içi m2 sayısı
+
+-->
