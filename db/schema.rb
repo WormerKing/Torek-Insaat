@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_27_124909) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_18_125729) do
   create_table "admins", force: :cascade do |t|
     t.string "username", limit: 50, null: false
     t.string "email", limit: 50, null: false
@@ -43,6 +43,17 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_27_124909) do
     t.string "image"
     t.text "body"
     t.string "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title", null: false
+    t.date "start_date", null: false
+    t.date "end_date"
+    t.text "body", null: false
+    t.string "image", null: false
+    t.string "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "tamamlanan_projeler", media:"all", "data-turbo-track": "reload" %>
+<%= stylesheet_link_tag "devam_eden_projeler", media:"all", "data-turbo-track": "reload" %>
 <div class="container-fluid">
 	<div class="row">
 		<h4 class="text-center">Tamamlanan Projeler</h4>
@@ -11,158 +11,29 @@
 			    <div class="container-fostrap">
 			        <div class="content">
 			            <div class="container">
-			                <div class="row">
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            	<%= image_tag("tamamlanan-projeler/gürcistan-otel.jpg")%>
-			                          	</a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Florida Amerikan Yaşam Alanı Projesi
-			                                </p>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            <%= image_tag("tamamlanan-projeler/hırvatistan-rammos.webp")%>
-			                          </a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Hırvatistan Rammos Yaşam Alanı Projesi
-			                                </p>
-			                            </div>		                           
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            <%= image_tag("tamamlanan-projeler/antalya-toki.webp")%>
-			                          </a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Antalya Toki Projesi
-			                                </p>
-			                            </div>			       
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="row">
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            <%= image_tag("tamamlanan-projeler/samsun-termik-santral.jpeg")%>
-			                          </a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Samsun EnerjiSa Termik Santrali projesi                                
-			                                </p>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            <%= image_tag("tamamlanan-projeler/samsun-dalga-santrali.jpeg")%>
-			                          </a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Samsun Dalga Santral Projesi
-			                                </p>
-			                            </div>		                           
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            	<%= image_tag("tamamlanan-projeler/mersin-dalga-santrali.jpeg")%>
-			                          	</a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Mersin Dalga Santral Projesi
-			                                </p>
-			                            </div>			       
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="row">
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            	<%= image_tag("tamamlanan-projeler/aliağa-işbirliği.jpeg")%>
-			                          	</a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Aliağa Şirket Danışmanlığı
-			                                </p>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            	<%= image_tag("tamamlanan-projeler/baykonur-enerji.jpeg")%>			                          
-			                        	</a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Baykonur Uzay Üssü Ek Enerji Projesi
-			                                </p>
-			                            </div>		                           
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            <%= image_tag("tamamlanan-projeler/kennedy-enerji.jpg")%>
-			                          </a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                    Kennedy Uzay Üssü Roket Soğutma Projesi
-			                                </p>
-			                            </div>			       
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="row">
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            	<%= image_tag("tamamlanan-projeler/çayırhan-termik-santrali.jpg")%>
-			                          	</a>
-			                            <div class="card-content">
-			                                <p class="text-center">
-			                                 	Ankara Çayırhan Termik Santrali Projesi
-			                                </p>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            	<%= image_tag("tamamlanan-projeler/erzincan-rüzgar-türbinleri.jpeg")%>
-			                          	</a>
-			                            <div class="card-content">	                             
-			                                <p class="text-center">
-			                           	        Erzincan Rüzgar Türbinleri Projesi
-			                                </p>
-			                            </div>		                           
-			                        </div>
-			                    </div>
-			                    <div class="col-xs-12 col-sm-12 col-md-4">
-			                        <div class="card">
-			                            <a class="img-card" href="#">
-			                            	<%= image_tag("tamamlanan-projeler/uşak-center.jpeg")%>
-			                          	</a>
-			                            <div class="card-content">	                             
-			                                <p class="text-center">
-			                           	        Uşak Yaşam Alanı Projesi
-			                                </p>
-			                            </div>		                           
-			                        </div>
-			                    </div>
-			                </div>
+			            	<% @projects.each do |project|%>
+			            		<div class="row">
+			            			<% project.each do |p|%>
+			            				<div class="col-xs-12 col-sm-12 col-md-4">
+				                        	<div class="card custom-card">
+				                            	<a class="img-card" href="#">
+				                            		<%= image_tag(p.image)%>
+				                          		</a>
+				                            	<div class="card-content">
+				                                	<p class="text-center">
+				                                    	<%= p.title%>
+				                                	</p>
+				                            	</div>
+				                           		<div class="card-details">
+				                           			<strong>Başlangıç tarihi : <%= p.start_date%></strong><br>
+				                           			<strong>Bitiş tarihi : <%= p.end_date%></strong><br><br>
+				                            		<p><%= p.body%></p>
+				                           		</div>
+			                        		</div>
+			                    		</div>
+			            			<%end%>
+			            		</div>
+			            	<%end%>
 			            </div>
 			        </div>
 			    </div>

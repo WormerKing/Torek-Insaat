@@ -59,8 +59,27 @@ h1.heading {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
     transition: box-shadow .25s; 
 }
+// Burası sonradan eklendi
+
+.custom-card {
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-details {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.custom-card:hover .card-details {
+  height: 160px; /* Varsayılan yüksekliği */
+}
+
+// ###################################
+
 .card:hover {
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  border-top:2px solid #5566cc;
 }
 .img-card {
   width: 100%;

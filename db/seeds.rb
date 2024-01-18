@@ -74,9 +74,207 @@ basindan_haberler = [
 	}
 ]
 
+devam_eden_projeler = [
+	{
+		title:"Karabük Eskipazar Tramvay Hattı Projesi",
+		body:"Karabük Eskipaazar ilçesinde yapılan bu proje sayesinde artık eskipazar halkı merkeze ve diğer illere
+		daha rahat ulaşım sağlayabilcek",
+		image:"devam-eden-projeler/tramvay.png",
+		start_date:"2019-12-14",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Aydın Yeni kanal Projesi",
+		body:"Aydın ilinde yapılması planlanan projede büyük menderesden alınacak su ile yeni tarım çalışanlarının ve 
+		sulanması hedeflenmektedir.",
+		image:"devam-eden-projeler/aydın-kanal-inşaatı.jpeg",
+		start_date:"2020-02-28",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Riyad Altyapı Hizmetleri Projesi",
+		body:"Arabistanda çalışmalarına başlanan Riyad altyapı projesi bölge halkınını yıllardır süregelen altyapı sıkıntılarına çözüm için 
+		yapımına başlandı.",
+		image:"devam-eden-projeler/riyad-altyapı.jpeg",
+		start_date:"2022-04-24",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Yusufeli Barajı Köprü Projesi",
+		body:"Çoruh Nehri üzerinde yer alan Yusufeli Barajı ve Hidroelektrik Santralinin yapımına başlandı.",
+		image:"devam-eden-projeler/yusufeli-baraj.jpeg",
+		start_date:"2022-09-06",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Akkuyu Nükleer Santral Projesi",
+		body:"Ülkemizin ilk nükleer santrali olucak olan akkuyu nükleer santralinin inşaatı Torek inşaat şirketi bünyesinde başlatıldı ve tahmini olarak 2025 sonuna kadar tamamlanması bekleniyor.",
+		image:"devam-eden-projeler/akkuyu-nükleer.jpeg",
+		start_date:"2021-11-26",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Buharkent Termik Santral Projesi",
+		body:"Aydın ilinin Buharkent ilçesinde yapmına başlanan termik santral, Aydın ilinin toplam elektrik ihtiyacının %38'ini tek başına karşılayacak.
+		 Söz konusu santralin yapımı devam etmektedir.",
+		image:"devam-eden-projeler/buharkent.jpg",
+		start_date:"2021-4-12",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Fetiye Otel Zinciri Projesi",
+		body:"Muğla ilinin Fethiye ilçesinde yapımı planlanan otel zincirinin temel atma töreni yapıldı. Muğla ilinin Fethiye ilçesinde yapılması planlanan Otel Zinciri projesinin turizm gelirine katkı yapılması planlanıyor.",
+		image:"devam-eden-projeler/muğla-fetiye.jpg",
+		start_date:"2019-2-13",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Şanlıurfa Güneş Panel Santrali projesi",
+		body:"Şanlıurfa ilinin siverek ilçesinde yapmına başlanan Güneş Panel santral projesi ile Şanlıurfa ilinin günlük elektrik tüketiminin %46'sı bu terminalden karşılanabilecek.",
+		image:"devam-eden-projeler/şanlıurfa-solarpanel.jpg",
+		start_date:"2020-6-04",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Arabistan Nükleer Santral Projesi",
+		body:"Arabistanda yapımına başlanan nükleer santral projesi ile birlikte Arabistan günlük enerji ihtiyacının %20'sinin karşılanması bekleniyor",
+		image:"devam-eden-projeler/arabistan-nükleer.webp",
+		start_date:"2021-1-12",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"İstanbul Medipol Center Projesi",
+		body:"İstanbul'da yapımına başlanan Medipol Center projesi ile birlikte konuklarımıza yeni bir hayat deneyimi sunmayı hedefliyoruz. Özellikle deprem riskinin yüksek olduğu İstanbul'da binaları özel olarak depreme karşı dayanıklı olarak tasarlıyoruz",
+		image:"devam-eden-projeler/istanbul.jpeg",
+		start_date:"2023-1-12",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Ankara Ryzen Center Projesi",
+		body:"Ankara'da yapımına başlanan Ryzen Center projesi ile birlikte konuklarımıza yeni bir hayat deneyimi sunmayı hedefliyoruz. Özellikle Ankaranın sert iklimine sahip binalar yapmaya özen gösteriyoruz.",
+		image:"devam-eden-projeler/ankara.jpeg",
+		start_date:"2021-3-11",
+		status:"devam-eden-proje"
+	},
+	{
+		title:"Elazığ Toki Yeni Alanlar Projesii",
+		body:"Elazığ'da yapımına başlanan Toki projesi ile birlikte konuklarımıza güvenli bir ev vermeyi hedefliyoruz. Özellikle Elazığın sert iklimine sahip binalar yapmaya özen gösteriyoruz.",
+		image:"devam-eden-projeler/elazığ.jpeg",
+		start_date:"2018-5-18",
+		status:"devam-eden-proje"
+	}
+]
+
+tamamlanan_projeler = [
+	{
+		title:"Florida Amerikan Yaşam Alanı Projesi",
+		body:"Florida Amerikan yaşam alanı projesi ile birlike Adanadaki Amerikan askerlerinin barınma ihtiyaçlarını karşılamayı hedefliyoruz.",
+		image:"tamamlanan-projeler/gürcistan-otel.jpg",
+		start_date:"2012-5-6",
+		end_date:"2020-1-15",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Hırvatistan Rammos Yaşam Alanı Projesi",
+		body:"Hırvatistam yaşam alanı projesi ile birlike Hırvatistandaki konuklarımızın barınma ihtiyaçlarını karşılamayı hedefliyoruz.",
+		image:"tamamlanan-projeler/hırvatistan-rammos.webp",
+		start_date:"2014-2-6",
+		end_date:"2023-6-13",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Antalya Toki Projesi",
+		body:"Antalya Toki projesi ile birlike Antalyadaki konuklarımız barınma ihtiyaçlarını karşılamayı hedefliyoruz.",
+		image:"tamamlanan-projeler/antalya-toki.webp",
+		start_date:"2013-1-6",
+		end_date:"2020-5-30",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Samsun EnerjiSa Termik Santrali projesi",
+		body:"Samsun EnerjiSa Termik santral projesi ile yapılıcak olan Termik santral, Samsun ilinin günlük elektrik ihityacının %40'ını karşılayacak.",
+		image:"tamamlanan-projeler/samsun-termik-santral.jpeg",
+		start_date:"2010-10-9",
+		end_date:"2018-8-25",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Samsun Dalga Santral Projesi",
+		body:"Samsun dalga santral projesi ile birlikte Samsun ilinin günlük elektrik ihtiyacının %15'inin karşılanması bekleniyor.",
+		image:"tamamlanan-projeler/samsun-dalga-santrali.jpeg",
+		start_date:"2014-10-9",
+		end_date:"2017-8-6",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Mersin Dalga Santral Projesi",
+		body:"Mersin dalga santral projesi ile birlikte Mersin ilinin günlük elektrik ihtiyacının %20'sinin karşılanması bekleniyor.",
+		image:"tamamlanan-projeler/mersin-dalga-santrali.jpeg",
+		start_date:"2015-3-9",
+		end_date:"2018-4-6",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Aliağa Şirket Danışmanlığı",
+		body:"Aliağa şirketininin Torek İnşaat Şirketinden talep ettiği danışmanlık hizmeti.",
+		image:"tamamlanan-projeler/aliağa-işbirliği.jpeg",
+		start_date:"2018-4-1",
+		end_date:"2018-4-8",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Baykonur Uzay Üssü Ek Enerji Projesi",
+		body:"Baykonuz Uzay üssü projesi ile Kazakistan uzay çalışmalarına destek veriyoruz.",
+		image:"tamamlanan-projeler/baykonur-enerji.jpeg",
+		start_date:"2014-4-1",
+		end_date:"2019-5-15",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Kennedy Uzay Üssü Roket Soğutma Projesi",
+		body:"Kennedy Uzay roket soğutma tesisi ile ABD uzay çalışmalarına destek veriyoruz. Gerekli araçları sağlıyoruz.",
+		image:"tamamlanan-projeler/kennedy-enerji.jpg",
+		start_date:"2015-4-1",
+		end_date:"2012-5-3",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Ankara Çayırhan Termik Santrali Projesi",
+		body:"Ankara Çayırhan Termik Santral Projesi ile Torek İnşaat, Ankaranın günlük elektrik ihtiyacının %35'ini tek başına karşılamayı planlıyor.",
+		image:"tamamlanan-projeler/çayırhan-termik-santrali.jpg",
+		start_date:"2016-4-1",
+		end_date:"2023-5-3",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Erzincan Rüzgar Türbinleri Projesi",
+		body:"Erzincan Rüzgar Enerjisi Projesi ile Torek İnşaat, Erzincan'ın günlük elektrik ihtiyacının %50'sini tek başına karşılamayı planlıyor.",
+		image:"tamamlanan-projeler/erzincan-rüzgar-türbinleri.jpeg",
+		start_date:"2019-4-1",
+		end_date:"2023-5-3",
+		status:"tamamlanan-proje"
+	},
+	{
+		title:"Uşak Yaşam Alanı Projesi",
+		body:"Uşak yaşam alanı projesi ile Uşak şehrinde yaşayan konuklarımıza daha iyi bir konut sunmaya hazırız.",
+		image:"tamamlanan-projeler/uşak-center.jpeg",
+		start_date:"2018-4-1",
+		end_date:"2023-5-3",
+		status:"tamamlanan-proje"
+	}
+]
+
 BizdenHaberler.destroy_all
 BasindanHaberler.destroy_all
+Project.all.destroy_all
 
+devam_eden_projeler.each do |proje|
+	Project.create(proje)
+end
+
+tamamlanan_projeler.each do |proje|
+	Project.create(proje)
+end
 
 bizden_haberler.each do |haber|
 	BizdenHaberler.create(haber)

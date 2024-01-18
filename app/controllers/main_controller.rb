@@ -32,5 +32,12 @@ class MainController < ApplicationController
 		render(template:"main/tahmini_maliyet_hesaplama_post")
 	end
 
+	def devam_eden_projeler
+		@projects = Project.where('status = ?','devam-eden-proje').each_slice(3).to_a
+	end
+	def tamamlanan_projeler
+		@projects = Project.where('status = ?','tamamlanan-proje').each_slice(3).to_a
+	end
+
 	# FIXME navbar kısmı mobilde düzgün çalışmıyor
 end

@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag "_navbar", media:"all", "data-turbo-track": "reload" %>
 <div class="container-flouid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed-top fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed-top fixed-top py-3">
         <div class="container">
-            <a href="/" class="navbar-brand">Logo</a>
+            <a href="/" class="navbar-brand fs-4 ml-5 anasayfa" id="anasayfa">Anasayfa</a>
             <!--a class="navbar-brand" href="#" style="padding: 4px;margin:auto"> <img src="" style="height:100%;width: auto;" title="mycompanylogo"></a-->
             <!-- Buraya logo eklenecek-->
             
@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown dropdown-with-hover">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light fs-5 kurumsal" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Kurumsal
                         </a>
                         <div class="dropdown-menu dropdown-menu-with-hover" aria-labelledby="navbarDropdown">
@@ -25,7 +25,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown dropdown-with-hover">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light fs-5 projeler" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Projeler
                         </a>
                         <div class="dropdown-menu dropdown-menu-with-hover" aria-labelledby="navbarDropdown">
@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="nav-item dropdown dropdown-with-hover">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light fs-5 sektorler" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sektörler
                         </a>
                     <div class="dropdown-menu dropdown-menu-with-hover" aria-labelledby="navbarDropdown">
@@ -47,7 +47,7 @@
                     </li>
 
                     <li class="nav-item dropdown dropdown-with-hover">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light fs-5 haberler" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Haberler
                         </a>
                         <div class="dropdown-menu dropdown-menu-with-hover" aria-labelledby="navbarDropdown">
@@ -56,7 +56,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown dropdown-with-hover">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-with-hover text-light fs-5 insan_kaynaklari" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             İnsan Kaynakları
                         </a>
                         <div class="dropdown-menu dropdown-menu-with-hover" aria-labelledby="navbarDropdown">
@@ -66,7 +66,7 @@
                     </li>
                     <li class="nav-item">
                         <%# link_to("Tahmini maliyet hesaplama",tahmini_maliyet_hesaplama_path,class:"nav-link dropdown-toggle dropdown-toggle-with-hover text-light",id:"navbarDropdown",role:"button")%>
-                        <a class="nav-link text-light" href="/tahmini-maliyet-hesaplama" id="navbarDropdown" role="button">
+                        <a class="nav-link text-light fs-5 maliyet_hesaplama" href="/tahmini-maliyet-hesaplama" id="navbarDropdown" role="button">
                             Tahmini maliyet hesaplama
                         </a>
 
