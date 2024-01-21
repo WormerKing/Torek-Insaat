@@ -79,6 +79,10 @@
                 <%# end %>
                 <% if admin_signed_in? || user_signed_in?%>
                     <% if admin_signed_in? %>
+                        <div class="ml-3">
+                            <%= link_to("Admin Paneli",admin_panel_path,class:"btn btn-warning text-dark  my-sm-0",type:"button")%>
+                        </div>
+                        <span class="text-dark">as</span>
                         <%= link_to("Oturumu kapat",logout_path,:method => :delete,class:"btn btn-danger text-dark my-2 my-sm-0",type:"button",data: { turbo_method: :delete })%>
                     <% else %>
                         <%# bu kısım eklenecek%>
