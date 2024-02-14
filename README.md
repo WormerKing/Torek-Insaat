@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 # Torek-Insaat
 Torek İnşaat web sitesi örneği
 =======
@@ -31,5 +30,5 @@ rails s
 
 #### Bazı görseller
 ![Anasayfa](/app/assets/images/github/anasayfa.png)
-![Görsel](/app/assets/images/github/görsel1.png)
-![Görsel](/app/assets/images/github/görset2.png)
+![Görsel](/app/assets/images/github/gorsel1.png)
+![Görsel](/app/assets/images/github/gorsel2.png)
