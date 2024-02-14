@@ -16,7 +16,7 @@ cd Torek-Insaat
 docker-compose up --build -d
 ```
 
-========
+<hr>
 
 ## Kurulum(RVM)
 ```
@@ -26,3 +26,10 @@ bundle install && bundle update
 bin/rails db:drop && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
 rails s
 ```
+
+<hr>
+
+#### Bazı görseller
+![Anasayfa](/app/assets/images/github/anasayfa.png)
+![Görsel](/app/assets/images/github/görsel1.png)
+![Görsel](/app/assets/images/github/görset2.png)
