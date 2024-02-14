@@ -2,6 +2,9 @@
 Torek İnşaat web sitesi örneği
 =======
 ### Torek inşaat adlı bir inşaat şirketinini resmi web sitesinin kodları
+<p>Bu sitenin yapılma amacı tamamen eğitim amaçlı olup hiçbir şekilde bir <em>firmayı ya da kuruluşu temsil etmemektedir !</em></p>
+<p>Bu proje 2023-2024 güz dönemi mesleki uygulama ve proje dersi için hazırlanmıştır.</p>
+
 
 * Ruby Version = 3.2.0
 * Rails Version = 7.1.1
