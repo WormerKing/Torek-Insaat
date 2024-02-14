@@ -1,35 +1,28 @@
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 # Torek-Insaat
-Torek İnşaat web sitesi
+Torek İnşaat web sitesi örneği
 =======
->>>>>>> c8b2d02 (Proje oluşturuldu ve github'a yüklendi)
-# README
+### Torek inşaat adlı bir inşaat şirketinini resmi web sitesinin kodları
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby Version = 3.2.0
+* Rails Version = 7.1.1
 
-Things you may want to cover:
 
-* Ruby version
+## Kurulum(Docker)
+```
+git clone https://github.com/WormerKing/Torek-Insaat.git
+cd Torek-Insaat
+docker-compose up --build -d
+```
 
-* System dependencies
+========
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-<<<<<<< HEAD
-=======
->>>>>>> f610f06 (Proje oluşturuldu ve github'a yüklendi)
->>>>>>> c8b2d02 (Proje oluşturuldu ve github'a yüklendi)
+## Kurulum(RVM)
+```
+git clone https://github.com/WormerKing/Torek-Insaat.git
+cd Torek-Insaat
+bundle install && bundle update
+bin/rails db:drop && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
+rails s
+```
