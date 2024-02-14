@@ -1,4 +1,3 @@
-=======
 # Torek-Insaat
 Torek İnşaat web sitesi örneği
 =======
@@ -29,6 +28,6 @@ rails s
 <hr>
 
 #### Bazı görseller
-![Anasayfa](/app/assets/images/github/anasayfa.png)
-![Görsel](/app/assets/images/github/gorsel1.png)
-![Görsel](/app/assets/images/github/gorsel2.png)
+![Anasayfa](/app/assets/images/github/anasayfa.png)<hr>
+![Görsel](/app/assets/images/github/gorsel1.png)<hr>
+![Görsel](/app/assets/images/github/gorsel2.png)<hr>
