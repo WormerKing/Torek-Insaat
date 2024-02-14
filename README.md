@@ -2,7 +2,7 @@
 Torek İnşaat web sitesi örneği
 =======
 ### Torek inşaat adlı bir inşaat şirketinini resmi web sitesinin kodları
-<p>Bu sitenin yapılma amacı tamamen eğitim amaçlı olup hiçbir şekilde bir <b>firmayı ya da kuruluşu temsil etmemektedir !</p>b</p>
+<p>Bu sitenin yapılma amacı tamamen eğitim amaçlı olup hiçbir şekilde bir <b>firmayı ya da kuruluşu temsil etmemektedir !</b></p>
 <p>Bu proje 2023-2024 güz dönemi mesleki uygulama ve proje dersi için hazırlanmıştır.</p>
 <hr>
 
